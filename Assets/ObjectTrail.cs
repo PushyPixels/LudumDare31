@@ -22,10 +22,14 @@ public class ObjectTrail : MonoBehaviour
 		{
 			Vector3 toTransformVector = transform.position - currentObjectStartPosition;
 
-			currentObject.transform.rotation = Quaternion.LookRotation(toTransformVector);
+			float distance = toTransformVector.magnitude;
+
+			if(distance > 0.0f)
+			{
+				currentObject.transform.rotation = Quaternion.LookRotation(toTransformVector);
+			}
 
 			Vector3 newScale = currentObject.transform.localScale;
-			float distance = toTransformVector.magnitude;
 			newScale.z = distance*sizeRatio;
 			currentObject.transform.localScale = newScale;
 
