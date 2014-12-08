@@ -35,8 +35,8 @@ public class GameManager : MonoBehaviour
 			while(t > scorePerSecond)
 			{
 				t -= scorePerSecond;
+				score += multiplier;
 			}
-			Debug.Log(score);
 		}
 	}
 

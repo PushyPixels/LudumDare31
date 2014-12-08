@@ -935,6 +935,11 @@ MonoBehaviour:
   - {fileID: 100000, guid: e8609e82a6ad746779234fcc0d2672f9, type: 2}
   - {fileID: 100000, guid: e8609e82a6ad746779234fcc0d2672f9, type: 2}
   - {fileID: 100000, guid: e8609e82a6ad746779234fcc0d2672f9, type: 2}
+  - {fileID: 100000, guid: 3e818b77abd1747bfbeaeaba1423c8bb, type: 2}
+  - {fileID: 100000, guid: e8609e82a6ad746779234fcc0d2672f9, type: 2}
+  - {fileID: 100000, guid: e8609e82a6ad746779234fcc0d2672f9, type: 2}
+  - {fileID: 100000, guid: e8609e82a6ad746779234fcc0d2672f9, type: 2}
+  - {fileID: 100000, guid: 6d80fa1af780b412391669c81d94b9b3, type: 2}
   spawnRadius: 5
   minSpawnDelay: .100000001
   maxSpawnDelay: 1

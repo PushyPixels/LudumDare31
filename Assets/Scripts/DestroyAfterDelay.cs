@@ -5,9 +5,14 @@ public class DestroyAfterDelay : MonoBehaviour
 {
 	public float delay = 1.0f;
 
-	// Use this for initialization
-	void Start ()
+	private float t = 0.0f;
+
+	void Update()
 	{
-		Destroy(gameObject, delay);
+		t += Time.deltaTime;
+		if(t > delay)
+		{
+			Destroy(gameObject);
+		}
 	}
 }
