@@ -8,10 +8,10 @@ public class GameManager : MonoBehaviour
 	public GameObject gameOverDisplay;
 
 	public static int score;
+	public static int multiplier;
 	public float scorePerSecond = 1.0f;
 
 	private bool gameOver = false;
-	private int multiplier = 1;
 
 	private float t;
 
@@ -22,10 +22,12 @@ public class GameManager : MonoBehaviour
 	{
 		Instance = this;
 		score = 0;
+		multiplier = 1;
 	}
 
 	void Update()
 	{
+		Screen.showCursor = false;
 		if(!gameOver)
 		{
 			t += Time.deltaTime;
@@ -36,11 +38,6 @@ public class GameManager : MonoBehaviour
 			}
 			Debug.Log(score);
 		}
-	}
-
-	public static void IncreaseMultiplier()
-	{
-		Instance.multiplier++;
 	}
 
 	public static void GameOver()
