@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trailObject: {fileID: 100000, guid: 76fd7d3d3ba3b4a35bab221c3df48064, type: 2}
-  newObjectDistance: 1
+  newObjectDistance: .100000001
   sizeRatio: .5
 --- !u!4 &1370603110
 Transform:
