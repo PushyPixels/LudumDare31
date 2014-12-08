@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DisableBehavioursOnGameOver : MonoBehaviour
+public class GibOnGameOver : MonoBehaviour
 {
-	public Behaviour[] behavioursToDisable;
+	public GameObject gib;
 	
 	void OnEnable ()
 	{
@@ -17,9 +17,7 @@ public class DisableBehavioursOnGameOver : MonoBehaviour
 
 	void OnGameOver()
 	{
-		foreach(Behaviour bev in behavioursToDisable)
-		{
-			bev.enabled = false;
-		}
+		Instantiate(gib,transform.position,transform.rotation);
+		Destroy (gameObject);
 	}
 }

@@ -2,10 +2,10 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class TextTimer : MonoBehaviour
+public class DisplayScore : MonoBehaviour
 {
+
 	private Text text;
-	private float time = 0.0f;
 	private string prefix;
 
 	// Use this for initialization
@@ -18,7 +18,6 @@ public class TextTimer : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		time += Time.deltaTime;
-		text.text = prefix + time.ToString("f2");
+		text.text = prefix + GameManager.score.ToString();
 	}
 }
