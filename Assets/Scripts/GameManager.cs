@@ -38,6 +38,13 @@ public class GameManager : MonoBehaviour
 				score += multiplier;
 			}
 		}
+		else
+		{
+			if(Input.anyKeyDown)
+			{
+				Application.LoadLevel(Application.loadedLevel);
+			}
+		}
 	}
 
 	public static void GameOver()
