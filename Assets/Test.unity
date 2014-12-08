@@ -357,6 +357,7 @@ GameObject:
   - 222: {fileID: 656086839}
   - 114: {fileID: 656086838}
   - 114: {fileID: 656086840}
+  - 114: {fileID: 656086841}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -426,6 +427,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0499ba63627744d3497ab775479166d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &656086841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 656086836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7f7d85e3bcf489f8bf94eb3ab3fee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behavioursToDisable:
+  - {fileID: 656086840}
 --- !u!1 &987425916
 GameObject:
   m_ObjectHideFlags: 0

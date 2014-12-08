@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 	public GameObject gameOverDisplay;
 
 	private bool gameOver = false;
+
+	public delegate void GameManagerEvent();
+	public static event GameManagerEvent OnGameOver;
 	
 	void Awake()
 	{
@@ -20,6 +23,10 @@ public class GameManager : MonoBehaviour
 		{
 			Instance.gameOver = true;
 			Instance.gameOverDisplay.SetActive(true);
+			if(OnGameOver != null)
+			{
+				OnGameOver.Invoke();
+			}
 		}
 	}
 }
