@@ -23,7 +23,7 @@ public class SpawnRandomly : MonoBehaviour
 
 		if(validateSpawnPosition)
 		{
-			while(Physics.OverlapSphere(position,validRadius,invalidateLayers).Length != 0)
+			while(Physics.CheckSphere(position,validRadius,invalidateLayers))
 			{
 				position = transform.position + (Vector3)Random.insideUnitCircle*spawnRadius;
 			}

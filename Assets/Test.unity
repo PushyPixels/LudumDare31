@@ -1725,8 +1725,8 @@ MonoBehaviour:
   spawnRadius: 5
   minSpawnDelay: .100000001
   maxSpawnDelay: 1
-  validateSpawnPosition: 0
-  validRadius: 2
+  validateSpawnPosition: 1
+  validRadius: 3
   invalidateLayers:
     serializedVersion: 2
     m_Bits: 256
