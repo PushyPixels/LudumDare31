@@ -14,11 +14,13 @@ public class SpawnRandomly : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		Invoke("Spawn",Random.Range(minSpawnDelay,maxSpawnDelay));
+		StartCoroutine(Spawn());
 	}
 
-	void Spawn ()
+	IEnumerator Spawn ()
 	{
+		yield return new WaitForSeconds(Random.Range(minSpawnDelay,maxSpawnDelay));
+
 		Vector3 position = transform.position + (Vector3)Random.insideUnitCircle*spawnRadius;
 
 		if(validateSpawnPosition)
@@ -26,10 +28,11 @@ public class SpawnRandomly : MonoBehaviour
 			while(Physics.CheckSphere(position,validRadius,invalidateLayers))
 			{
 				position = transform.position + (Vector3)Random.insideUnitCircle*spawnRadius;
+				yield return null;
 			}
 		}
 
 		Instantiate(objectsToSpawn[Random.Range(0,objectsToSpawn.Length)], position, Quaternion.LookRotation(Random.insideUnitCircle));
-		Invoke("Spawn",Random.Range(minSpawnDelay,maxSpawnDelay));
+		StartCoroutine(Spawn());
 	}
 }
