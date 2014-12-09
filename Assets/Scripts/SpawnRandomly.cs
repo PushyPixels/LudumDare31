@@ -7,6 +7,9 @@ public class SpawnRandomly : MonoBehaviour
 	public float spawnRadius = 10.0f;
 	public float minSpawnDelay = 1.0f;
 	public float maxSpawnDelay = 2.0f;
+	public bool validateSpawnPosition;
+	public float validRadius = 1.0f;
+	public LayerMask invalidateLayers = -1;
 
 	// Use this for initialization
 	void Start ()
@@ -16,7 +19,17 @@ public class SpawnRandomly : MonoBehaviour
 
 	void Spawn ()
 	{
-		Instantiate(objectsToSpawn[Random.Range(0,objectsToSpawn.Length)],transform.position + (Vector3)Random.insideUnitCircle*spawnRadius, Quaternion.LookRotation(Random.insideUnitCircle));
+		Vector3 position = transform.position + (Vector3)Random.insideUnitCircle*spawnRadius;
+
+		if(validateSpawnPosition)
+		{
+			while(Physics.OverlapSphere(position,validRadius,invalidateLayers).Length != 0)
+			{
+				position = transform.position + (Vector3)Random.insideUnitCircle*spawnRadius;
+			}
+		}
+
+		Instantiate(objectsToSpawn[Random.Range(0,objectsToSpawn.Length)], position, Quaternion.LookRotation(Random.insideUnitCircle));
 		Invoke("Spawn",Random.Range(minSpawnDelay,maxSpawnDelay));
 	}
 }
