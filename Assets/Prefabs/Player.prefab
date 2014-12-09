@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be985da4312c64c5383d7067f6954e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gib: {fileID: 100000, guid: ec665ac40afc94ef89da6b17d8bb817b, type: 2}
+  gib: {fileID: 100000, guid: 51b2e46a5df6c4f50b0b281a1e1be1f4, type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
