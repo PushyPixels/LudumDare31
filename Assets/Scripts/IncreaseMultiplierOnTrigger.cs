@@ -3,9 +3,15 @@ using System.Collections;
 
 public class IncreaseMultiplierOnTrigger : MonoBehaviour
 {
+	private bool hasTriggered = false;
+
 	void OnTriggerEnter()
 	{
-		GameManager.multiplier++;
-		Destroy(gameObject);
+		if(!hasTriggered)
+		{
+			GameManager.multiplier++;
+			hasTriggered = true;
+			Destroy(gameObject);
+		}
 	}
 }

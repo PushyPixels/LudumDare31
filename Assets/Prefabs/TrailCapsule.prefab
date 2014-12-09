@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32056bcf6ab334be2b25e5553394c2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: .100000001
+  delay: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b58d502cc2714ce8882199f636414f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayTimePerMultiplier: .100000001
+  delayTimePerMultiplier: .0250000004
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
