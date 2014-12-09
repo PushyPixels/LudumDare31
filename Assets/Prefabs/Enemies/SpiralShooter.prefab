@@ -42,7 +42,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 8aaed444a295b41cfb3b4ef28deb3d34, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400000
